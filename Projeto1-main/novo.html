@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto 1 - Novo Usuário 18/10/2022</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<body class="register">
+    <div class="card" style="width:25%">
+        <div class="text-center my-5">
+            <!--m de margin e y de top e bottom-->
+            <img src="images/fatecitu.png" alt="logo da fatec" width="200">
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Novo usuário</h5>
+            <form>
+                <div class="form-group">
+                    <label for="emailinput">E-mail</label>
+                    <input type="email" class="form-control" autofocus placeholder="Email do usuário" id="emailinput" />
+                </div>
+                <div class="form-group">
+                    <label for="senhainput">Senha</label>
+                    <input type="password" class="form-control" placeholder="Senha" id="senhainput" />
+                </div>
+                <div class="mt-3">
+                    <button class="btn btn-success" 
+                    onclick="event.preventDefault();novoUsuario(document.getElementById('emailinput').value, 
+                    document.getElementById('senhainput').value)">📰 Registrar</button>
+                </div>
+                <a href="index.html">Já tem cadastro? Clique aqui!</a>
+            </form>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-database.js"></script>
+    <script src="js/firebase.js"></script>
+    <script src="js/authentication.js"></script>
+</body>
+
+</html>
